@@ -30,14 +30,14 @@ function Header() {
                 </div>
                 <div className={classes.search}>
                     <select name="" id="" className={classes.selectt} >
-                        <option value="" selected="selected">All</option>
+                        <option value="">All</option>
                     </select>
                     <input type="text" name='' id='' placeholder='Search Amazon.ET' />
                     <BsSearch  size={25}/>
                 </div>
                 <div className={classes.order__container}>
                     <div className={classes.language}>
-                        <img src="/US.png" alt="" />
+                        <img src="/ethiopia-26943_640.png" alt="" />
                         <select>
                             <option value="">En</option>
                         </select>
