@@ -5,7 +5,6 @@ import { BiCart } from "react-icons/bi";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import classes from "./Header.module.css"
 import LowerHeader from './LowerHeader';
-// import  "./Header.css"
 
 
 

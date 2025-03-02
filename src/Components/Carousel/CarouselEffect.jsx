@@ -2,7 +2,7 @@ import React from 'react'
 import {images} from "./img/data"
 import {Carousel} from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import styles from "./Carousel.module.css"
+import classes from "./Carousel.module.css"
 
 function CarouselEffect() {
   return (
@@ -20,7 +20,7 @@ function CarouselEffect() {
           return <img key={index} src={img} />;
         })}
       </Carousel>
-        <div className={styles.hero__img}>
+        <div className={classes.hero__img}>
 
         </div>
     </div>

@@ -1,0 +1,48 @@
+.category{
+  height: 350px;
+  width: 250px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.category img {
+  width: 90%;
+  object-fit: contain;
+  max-height: 220px;
+  padding: 0px 10px;
+}
+.category a{
+  text-decoration: none;
+  color: rgb(35,35,35);
+  display: grid;
+  height: 100%;
+
+}
+.category h2, .category p{
+  padding: 10px;
+  margin-left: 10px;
+}
+.category p{
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(9,132,209);
+  align-self: end;
+
+}
+
+.category_container{
+  position: relative;
+  margin-top: -18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+
+
+
+
+
+
+
+
