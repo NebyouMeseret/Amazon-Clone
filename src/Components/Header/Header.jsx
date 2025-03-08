@@ -2,6 +2,7 @@ import React from 'react'
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
+import { Link } from 'react-router';
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import classes from "./Header.module.css"
 import LowerHeader from './LowerHeader';
@@ -14,9 +15,9 @@ function Header() {
         <section >
             <div className={classes.header__container}>
                 <div className={classes.logo__container}>
-                    <a href="/">
+                    <Link to="/">
                         <img src="/PngItem_12080.png" alt="amazon-logo" />
-                    </a>
+                    </Link>
                 </div>
                 <div className={classes.delivery}>
                     <span>
@@ -39,27 +40,29 @@ function Header() {
                         <img src="/ethiopia-26943_640.png" alt="" />
                         <select>
                             <option value="">En</option>
+                            <option value="">Amh</option>
+                            <option value="">Oro</option>
                         </select>
                     </div>
                     <div className={classes.signin}>
-                        <a href="">
+                        <Link to="/auth">
                                 <p>Hello, Sign In</p>
                             <select>
                                 <option>Account & Lists</option>
                             </select>
-                        </a>
+                        </Link>
                     </div>
-                    <div>
-                        <a href="">
+                    <div className={classes.orders}>
+                        <Link to="/orders">
                             <p>returns</p>
                             <span>& Orders</span>
-                        </a>
+                        </Link>
                     </div>
                     <div className={classes.cart}>
-                        <a href="/cart">
+                        <Link to="/cart">
                             <BiCart size={35} />
                             <span>0</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

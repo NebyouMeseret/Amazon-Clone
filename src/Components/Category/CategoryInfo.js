@@ -3,13 +3,13 @@ export const categoryInfos = [
     id: 1,
     title: "Electronics",
     name: "electronics",
-    imageLink: 
-    "https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1694156372381-91kw0BYTftL._SL1500_.jpg",
+    imageLink:
+      "https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1694156372381-91kw0BYTftL._SL1500_.jpg",
   },
   {
     id: 2,
-    title: "Descover fashion trends",
-    name: "Fashion",
+    title: "Women's clothing",
+    name: "women's clothing",
     imageLink: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
   },
   {

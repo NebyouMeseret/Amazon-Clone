@@ -4,22 +4,22 @@ import ProductCard from './ProductCard';
 import classes from "./Product.module.css"
 
 function Product() {
-  const[products, setProducts] = useState([]);
-  useEffect( () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
     axios.get("https://fakestoreapi.com/products")
-    .then( (res) => {
-      setProducts(res.data)
-    })
-    .catch( (err) => {
-      console.log(err);
-    })
-  },[])
+      .then((res) => {
+        setProducts(res.data)
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }, [])
   return (
     <section className={classes.products__container}>
       {
-        products.map( (Prod) => (
-          <ProductCard product={Prod} />
-        ))
+        products.map((Prod) => {
+          return <ProductCard key={Prod.id} product={Prod} />
+        })
       }
     </section>
   )

@@ -1,42 +1,41 @@
-import React from 'react'
-import Rating from "@mui/material/Rating"
-import CurrencyFormat from './CurrencyFormat/CurrencyFormat'
-import classes from "./Product.module.css"
+import React from 'react';
+import Rating from "@mui/material/Rating";
+import classes from "./Product.module.css";
 import { NumericFormat } from 'react-number-format';
+import { Link } from 'react-router-dom';
 
+function ProductCard({ product }) {
+    const { image = null, title = "", rating = { rate: 0, count: 0 }, price = 0 } = product;
 
-function ProductCard({product}) {
-    // const {image, title, count, price} = product;
     return (
         <div className={classes.card__container}>
-            <a href="">
-                <img src={product.image} alt="" />
-            </a>
-            <div className=''>
-                <h3>{product.title}</h3>
+            <Link to={`/products/${product.id}`}>
+                {image && <img src={image} alt={title} />}
+            </Link>
+            <div>
+                <h3>{title}</h3>
                 <div className={classes.rating}>
-                    <Rating value={product.rating.rate} precision={0.2} />
-                    <small>{product.rating.count}</small>
+                    <Rating value={rating?.rate || 0} precision={0.2} />
+                    <small>{rating?.count || 0}</small>
                 </div>
                 <div>
-                    {/* <CurrencyFormat amount={product.price} /> */}
                     <NumericFormat
-                        value={product.price}
+                        value={price}
                         displayType={'text'}
                         thousandSeparator={true}
                         prefix={'ETB '}
                         format="ETB. ###,###.##"
-                        decimalScale={2} 
-                        fixedDecimalScale={true} 
+                        decimalScale={2}
+                        fixedDecimalScale={true}
                         renderText={(value) => <strong><code>{value}</code></strong>}
                     />
                 </div>
                 <button className={classes.button}>
-                    add to cart
+                    Add to cart
                 </button>
             </div>
         </div>
-    )
+    );
 }
 
-export default ProductCard
+export default ProductCard;
